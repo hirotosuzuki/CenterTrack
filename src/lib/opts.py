@@ -394,6 +394,7 @@ class opts(object):
       'tracking,ctdet': 'coco', 'tracking,multi_pose': 'coco_hp', 
       'tracking,ddd': 'nuscenes'
     }
+    # ここがself.parse(args)が正しい説
     opt = self.parse()
     from dataset.dataset_factory import dataset_factory
     train_dataset = default_dataset_info[opt.task] \
